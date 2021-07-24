@@ -1,5 +1,7 @@
 
 var currentTimeHeaderFormat = moment().format('dddd MMMM Do')
+$("#currentDay").text(currentTimeHeaderFormat)
+
 let day = moment().date()
 let year = moment().year()
 let month = moment().month()
@@ -16,7 +18,6 @@ for (let i=0; i<9; i++){
     momentTimes.push(time)
 }
 
-$("#currentDay").text(currentTimeHeaderFormat)
 let list = $("li")
 list.each(function(index, element){
     let isBefore = momentTimes[index].isBefore(currentTime)
@@ -37,3 +38,12 @@ list.each(function(index, element){
     localStorage.setItem('events', JSON.stringify(events))
   })
 })
+
+
+let events = JSON.parse(localStorage.getItem('events')) || {}
+
+for (let [index, event] of Object.entries(events)) {
+  let li = $(list[index])
+  li.find('textarea').val(event)
+}
+
