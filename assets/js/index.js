@@ -27,3 +27,13 @@ list.each(function(index, element){
     if (isAfter)  $(element).find("textarea").addClass('future');
     if (sameTime)  $(element).find("textarea").addClass('present');
 })
+
+
+list.each(function(index, element){
+  $(element).find('.saveBtn').on('click', function() {
+    let event = $(element).find('textarea').val().trim()
+    let events = JSON.parse(localStorage.getItem('events')) || {}
+    events[index] = event
+    localStorage.setItem('events', JSON.stringify(events))
+  })
+})
