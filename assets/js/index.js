@@ -9,7 +9,7 @@ let second = moment().second()
 let minute = moment().minute()
 let hour = moment().hour()
 
-var currentTime = moment().year(year).month(month).date(day).hour(12).minute(minute).second(second)
+var currentTime = moment().year(year).month(month).date(day).hour(hour).minute(minute).second(second)
 
 
 var momentTimes = []
