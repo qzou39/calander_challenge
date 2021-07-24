@@ -1,2 +1,2 @@
 # Work Day Scheduler Starter Code
-i used isafter isbefore and moment js to figure out how to compare the time
+i used isafter isbefore and moment js to figure out how to compare the time with the current time, and used if condition to set the background color based on the colors given in css style. and looped through a couple times and added eventlistener to the savebutton to get the textarea's text and put it into the localstorage and get the value from local storage to present on the webpage. 
